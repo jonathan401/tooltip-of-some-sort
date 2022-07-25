@@ -7,19 +7,24 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: #aaa;
   min-height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
   width: 100vw;
+  padding: 2rem;
 }
 
 .container {
   /* variables */
-  --toolbar-width: 300px;
-  --avatar-size: 20px;
+  --toolbar-width: 200px;
+  --avatar-size: 30px;
   --container-padding: 2rem;
   --border-width: 10px;
   --border-color: #555;
-  width: 400px;
+  width: 300px;
+  background-color: red;
   padding: 0 var(--container-padding);
   display: flex;
   align-items: center;
@@ -28,7 +33,6 @@ body {
   border-radius: 6px;
   box-shadow: 2px 2px 4px 0 #555;
   background-color: #888;
-  margin: 30px auto;
 }
 
 .avatar {
@@ -61,9 +65,16 @@ body {
   right: calc(100% - var(--border-width) * 2);
 }
 
+/* from top of avatar
+.toolbar.from-bottom {
+  top: 40%;
+  height: 200px;
+  background-color: red;
+} */
+
 .toolbar {
   border-radius: 5px;
-  width: var(--toolbar-width);
+  min-width: var(--toolbar-width);
   height: 200px;
   position: absolute;
   top: 100%;
