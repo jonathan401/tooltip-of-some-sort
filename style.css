@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  /* variables */
+  --toolbar-width: 300px;
+  --avatar-size: 20px;
+  --container-padding: 2rem;
+  --border-width: 10px;
+  --border-color: #555;
+  width: 400px;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px 0 #555;
+  background-color: #888;
+  margin: 30px auto;
+}
+
+.avatar {
+  position: relative;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  cursor: pointer;
+  background-color: #666;
+  border-radius: 50%;
+  transition: background-color 0.1s;
+}
+
+.avatar:hover {
+  background-color: #333;
+}
+
+.toolbar.open {
+  transform: scale(1);
+}
+
+/* testing positions */
+/* position box on the left */
+.toolbar.from-left {
+  /* reverse the direction when class 'from-left' is applied to toolbar */
+  left: calc(var(--avatar-size) / 2 - var(--border-width));
+  transform-origin: top left;
+}
+
+.toolbar.from-left::before {
+  right: calc(100% - var(--border-width) * 2);
+}
+
+.toolbar {
+  border-radius: 5px;
+  width: var(--toolbar-width);
+  height: 200px;
+  position: absolute;
+  top: 100%;
+  margin-top: 1rem;
+  /* set the toolbar from half the size of the avatar and take the width of the arrow into consideration */
+  right: calc(var(--avatar-size) / 2 - var(--border-width));
+  transform: scale(0);
+  background: var(--border-color);
+  transition: transform 0.1s;
+  transform-origin: top right;
+  box-shadow: 2px 2px 4px 0 #555;
+}
+
+.toolbar::before {
+   /* arrow */
+  content: '';
+  position: absolute;
+  right: 0;
+  transform: translateY(-85%);
+  border: var(--border-width) solid transparent;
+  /* border-radius: 3px; */
+  border-bottom: 12px solid var(--border-color);
+  transform-origin: top right;
+}
