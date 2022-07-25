@@ -1,3 +1,10 @@
+:root {
+  --avatar-size: 30px;
+  --container-padding: 2rem;
+  --border-width: 10px;
+  --border-color: #555;
+}
+
 *,
 *::before,
 *::after {
@@ -9,55 +16,80 @@
 body {
   background-color: #aaa;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  /* justify-content: center;
-  align-items: flex-start; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   padding: 2rem;
 }
 
+.guide > p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.guide .subtitle {
+  margin-top: 0.2rem;
+}
+
 .container {
   /* variables */
-  --toolbar-width: 200px;
-  --avatar-size: 30px;
-  --container-padding: 2rem;
-  --border-width: 10px;
-  --border-color: #555;
-  width: 300px;
-  background-color: red;
   padding: 0 var(--container-padding);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  height: 40px;
+  justify-content: space-around;
+  height: 200px;
+  max-width: 500px;
+  width: 100%;
   border-radius: 6px;
   box-shadow: 2px 2px 4px 0 #555;
-  background-color: #888;
+  background-color: #777;
+  margin: 30 auto;
 }
 
 .avatar {
+  background-color: #111;
+}
+.avatar:hover {
+  background-color: #444;
+}
+
+.box {
+  background-color: #333;
+}
+.box:hover {
+  background-color: #666;
+}
+
+.box2 {
+  background-color: #555;
+}
+.box2:hover {
+  background-color: #888;
+}
+
+
+.avatar,
+.box, 
+.box2 {
   position: relative;
   width: var(--avatar-size);
   height: var(--avatar-size);
   cursor: pointer;
-  background-color: #666;
   border-radius: 50%;
   transition: background-color 0.1s;
 }
 
-.avatar:hover {
-  background-color: #333;
-}
 
-.toolbar.open {
-  transform: scale(1);
-}
 
 /* testing positions */
 /* position box on the left */
 .toolbar.from-left {
   /* reverse the direction when class 'from-left' is applied to toolbar */
-  left: calc(var(--avatar-size) / 2 - var(--border-width));
+  /* left: calc(var(--avatar-size) / 2 - var(--border-width)); */
   transform-origin: top left;
 }
 
@@ -74,18 +106,20 @@ body {
 
 .toolbar {
   border-radius: 5px;
-  min-width: var(--toolbar-width);
-  height: 200px;
   position: absolute;
-  top: 100%;
-  margin-top: 1rem;
+  top: 90%;
+  margin-top: 0.5rem;
   /* set the toolbar from half the size of the avatar and take the width of the arrow into consideration */
-  right: calc(var(--avatar-size) / 2 - var(--border-width));
+  /* right: calc(var(--avatar-size) / 2 - var(--border-width)); */
   transform: scale(0);
-  background: var(--border-color);
+  /* background: var(--border-color); */
   transition: transform 0.1s;
   transform-origin: top right;
   box-shadow: 2px 2px 4px 0 #555;
+}
+
+.toolbar.open {
+  transform: scale(1);
 }
 
 .toolbar::before {
@@ -95,7 +129,6 @@ body {
   right: 0;
   transform: translateY(-85%);
   border: var(--border-width) solid transparent;
-  /* border-radius: 3px; */
-  border-bottom: 12px solid var(--border-color);
+  border-bottom: 10px solid inherit;
   transform-origin: top right;
 }
