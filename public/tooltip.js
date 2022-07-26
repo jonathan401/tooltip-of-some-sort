@@ -8,11 +8,11 @@ var Toolbar = /** @class */ (function () {
         var _this = this;
         this.setPosition = function (toolbar) {
             switch (_this.position) {
-                case 'right-bottom':
+                case 'bottom-right':
                     toolbar.style.transformOrigin = 'left top';
                     toolbar.style.left = "".concat((_this.container.offsetWidth / 2));
                     break;
-                case 'left-bottom':
+                case 'bottom-left':
                     toolbar.style.transformOrigin = 'right top';
                     toolbar.style.right = "".concat((_this.container.offsetWidth / 2));
                     break;
@@ -51,9 +51,9 @@ var Toolbar = /** @class */ (function () {
 }());
 ;
 // testing the class
-var avatarToolBar = new Toolbar(avatar, 90, 40, '#888', 'left-bottom');
+var avatarToolBar = new Toolbar(avatar, 90, 40, '#888', 'bottom-left');
 var boxToolBar = new Toolbar(box, 90, 40, '#666', 'center');
-var box2ToolBar = new Toolbar(box2, 90, 40, '#444', 'right-bottom');
+var box2ToolBar = new Toolbar(box2, 90, 40, '#444', 'bottom-right');
 avatarToolBar.init();
 boxToolBar.init();
 box2ToolBar.init();

@@ -8,14 +8,14 @@ class Toolbar {
   width: number;
   height: number;
   color?: string;
-  position?: 'right-bottom' | 'left-bottom' | 'center';
+  position?: 'bottom-right' | 'bottom-left' | 'center';
 
   constructor (
       container: HTMLElement, 
       width: number, 
       height: number, 
       color?: string, 
-      position?: 'right-bottom' | 'left-bottom' | 'center',
+      position?: 'bottom-right' | 'bottom-left' | 'center',
     ) {
     this.container = container;
     this.width = width;
@@ -26,12 +26,12 @@ class Toolbar {
 
   setPosition = (toolbar: HTMLDivElement) => {
     switch(this.position) {
-      case 'right-bottom': 
+      case 'bottom-right': 
         toolbar.style.transformOrigin = 'left top';
         toolbar.style.left = `${(this.container.offsetWidth / 2)}`;
         break;
 
-      case 'left-bottom':
+      case 'bottom-left':
         toolbar.style.transformOrigin = 'right top';
         toolbar.style.right = `${(this.container.offsetWidth / 2)}`;
         break;
@@ -67,9 +67,9 @@ class Toolbar {
 };
 
 // testing the class
-const avatarToolBar = new Toolbar(avatar, 90, 40, '#888', 'left-bottom');
+const avatarToolBar = new Toolbar(avatar, 90, 40, '#888', 'bottom-left');
 const boxToolBar = new Toolbar(box, 90, 40, '#666', 'center');
-const box2ToolBar = new Toolbar(box2, 90, 40, '#444', 'right-bottom');
+const box2ToolBar = new Toolbar(box2, 90, 40, '#444', 'bottom-right');
 avatarToolBar.init();
 boxToolBar.init();
 box2ToolBar.init();
