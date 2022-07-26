@@ -25,13 +25,18 @@ body {
   padding: 2rem;
 }
 
-.guide > p {
+.guide {
   text-align: center;
+}
+
+.guide h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.guide > p {
   font-weight: 500;
   font-size: 1.1rem;
-}
-.guide .subtitle {
-  margin-top: 0.2rem;
 }
 
 .container {
