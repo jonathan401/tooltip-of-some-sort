@@ -1,9 +1,12 @@
-# tooltip
+# Hey there 👋🏽
 
-Trying to create a clickable tooltip that can be customized using typed props to appear at specific positions. This could come-in handy when working on my react projects. For example
-clicking on an avatar to reveal some information about the user. The information about the user can be passed to the tooltip component using `props.children`. But since is just a vanilla
+This is a project that helps create customizable tooltips in terms of background colour, width and height and position.
+
+ This could come-in handy when working on my react projects. For example
+clicking on an avatar to reveal some information about the user. The information about the user can be passed to the tooltip component using `props.children`. 
+But since this is just a vanilla
 JavaScript project, that functionality may not work properly.
-I built this project using typescript in order to sharpen my typescript skills and also help me understand how typescript works 🙂
+I built this project using typescript in order to sharpen my typescript skills and also help me understand how typescript works 🙂.
 
 # Notes
 
@@ -33,6 +36,10 @@ This is because since the tooltip has to be inside a container (in this case, th
 4. Also, for now, the only way to change the background colour of the tooltip
 is by directly changing the colour prop passed to an instance of the tooltip.
 
+5. The approach I used in dynamically positioning the tooltip might not be the best 😆.
+ It was the only solution I could find for now 😁. I'll try finding a cleaner way to do this 👍🏾
+
+
 # Props
 
 The tootip accepts the following props:
@@ -55,8 +62,8 @@ The tootip accepts the following props:
 
 # conclusion
 
-This project tested my css layout skills as well as my typescript skills. The method I employed in positioning
-the tooltips relative to their parents might not have been the best approach. But hopefully, I'll be fixing that soon. I'll also try adding buttons and using only an instance of the tooltip to make it more interactive and clear.
+This project tested my css layout skills as well as my typescript skills. There might be a library to do this but I wanted to improve my problem solving skills 🙂.
+Hope you find it useful in your projects 😀
 
 
 Thanks for checking this out 😁
