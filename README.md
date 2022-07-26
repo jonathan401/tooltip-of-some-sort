@@ -45,3 +45,13 @@ The tootip accepts the following props:
 - bottom-left - which positions the tooltip at the bottom left corner of it's parent.
 - center - which places the tooltip at the center of the parent.
 - bottom-right - which places the tooltip at the bottom right corner of it's parent;
+
+# Resources
+
+- Tooltip Arrow - I learnt how to create a triangle in css from [this article](https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css) by [Alvaro Montoro](https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css). [This Youtube Video tutorial](https://youtu.be/ujlpzTyJp-M) by [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified) also helped.
+
+# conclusion
+
+This project tested my css layout skills as well as my typescript skills. The method I employed in positioning
+the tooltips relative to their parents might not have been the best approach. But hopefully, I'll be fixing that soon. I'll also try adding buttons and using only an instance of the tooltip to make it more interactive and clear.
+Thanks for checking this out :).
