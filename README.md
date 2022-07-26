@@ -30,7 +30,8 @@ appear in are the:
 
 # Props
 The tootip accepts the following props:
-- width (required) - of type number that will be used to customize the width of the tooltip in pixels.
-- height (required) - of type number that will be used to customize the height of the tooltip in pixels.
-- color - this is an optional prop that will be used to customize the background colour of the tooltip. If none is specified, 
-a default of white is used
+1. width (required) - of type number that will be used to customize the width of the tooltip in pixels.
+2. height (required) - of type number that will be used to customize the height of the tooltip in pixels.
+3. color - this is an optional prop that will be used to customize the background colour of the tooltip. If none is specified,
+  a light grey colour is used.
+
