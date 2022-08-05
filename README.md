@@ -6,11 +6,11 @@ This is a project that helps create customizable tooltips in terms of background
 clicking on an avatar to reveal some information about the user. The information about the user can be passed to the tooltip component using `props.children`. 
 But since this is just a vanilla
 JavaScript project, that functionality may not work properly.
-I built this project using typescript in order to sharpen my typescript skills and also help me understand how typescript works 🙂.
+I built this project using typescript in order to sharpen my typescript skills and also help me understand better how typescript works 🙂.
 
 # Notes
 
-1. For the toolip to work properly, you'd have to position it relative to its parent. i.e.
+1. For the tooltip to work properly, you'd have to position it relative to its parent. i.e.
 
 ```
 .tooltip-parent {
